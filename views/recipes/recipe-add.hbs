@@ -1,68 +1,82 @@
-<h2>Add a new recipe</h2>
-<form method="POST" action="/recipes/recipe-add" class="form">
-<div>
-<label class="label" for="title">Title:</label>
-<input class="input" type="text" name="title" id="title">
-<hr>
-</div>
-<div>
-<label class="label" for="type">Type:</label>
- <select id="type" class="select" required name="select">
-        <option value="-1" disabled selected>Choose a type</option>
-        <option value="recette">Recette</option>
-        <option value="tip">Tip</option>
-<hr>
-</div>
-<div>
-<label class="label" for="ingredients">Ingredients:</label>
-<input class="input" type="text" name="ingredients" id="ingredients" >
-<hr>
-</div>
-<div>
-<label class="label" for="category">Category:</label>
- <select id="category" class="select" required name="category">
-        <option value="-1" disabled selected>Choose a category</option>
-        <option value="maison">Maison</option>
-        <option value="cheveux">Cheveux</option>
-        <option value="visage">Visage</option>
-        <option value="hygiene">Hygiène</option>
-<hr>
-</div>
-<!--
-<label class="label" for="image">Image:</label>
-<input class="input" type="text" name="image" id="image"> -->
-<div>
-<label class="label" for="duration">Duration:</label>
-<input class="input" type="number" name="duration" id="duration">
-<hr>
-</div>
+<h1>Add a recipe</h1>
 
-<div>
-<label class="label" for="level">Level:</label>
- <select id="level" class="select" required name="level">
-        <option value="-1" disabled selected>Choose a level</option>
-        <option value="facile">Facile</option>
-        <option value="modere">Modéré</option>
-        <option value="difficile">Difficile</option>
-<hr>
-</div>
-
-<div>
-<label class="label" for="description">Description:</label>
-<input class="input" type="text" name="description" id="description">
-<hr>
-</div>
-
-<div>
-<label class="label" for="price">Price:</label>
-<select id="price" class="select" required name="price">
-        <option value="-1" disabled selected>Choose a price</option>
-        <option value="bon">Bon marché</option>
-        <option value="modere">Modéré</option>
-        <option value="cher">Cher</option>
-<hr>
-</div>
-
-<button>Add!</button>
-
+<form action="/recipes/recipe-add" method="post">
+  <h3>Ajouter votre recette ou votre tip ci-dessous:</h3>
+  <div>
+    <label for="titre">Titre</label>
+    <input
+      id="titre"
+      name="titre"
+      type="text"
+      placeholder="Shampoing solide"
+      value="Shampoo"
+    />
+  </div>
+  <div>
+    <label for="type">Type</label>
+    <select id="type" name="type">
+      <option value="-1" disabled selected>Choisir le type</option>
+      <option value="recette">Recette</option>
+      <option value="tip">Tip</option>
+    </select>
+  </div>
+  <div>
+    <label for="category">Catégorie</label>
+    <select id="category" name="category">
+      <option value="-1" disabled selected>Choisir la catégorie</option>
+      <option value="maison">Maison</option>
+      <option value="cheveux">Cheveux</option>
+      <option value="visage">Visage</option>
+      <option value="hygiene">Hygiène</option>
+    </select>
+  </div>
+  <div>
+    <label for="ingredients">Ingrédients</label>
+    <input
+      id="ingredients"
+      name="ingredients"
+      type="textarea"
+      placeholder="Huile de ricin"
+      value="Huile de coco"
+    />
+  </div>
+    <div>
+    <label for="description">Description/ Etapes</label>
+    <input
+      id="description"
+      name="description"
+      type="textarea"
+      placeholder="Mettre dans un saladier"
+      value="En premier ..."
+    />
+  </div>
+  <div>
+    <label for="duration">Duration en minutes</label>
+    <input
+      id="duration"
+      name="duration"
+      type="number"
+      placeholder="ex: 20"
+      value="20"
+    />
+  </div>
+   <div>
+    <label for="level">Niveau de difficulté</label>
+    <select id="level" name="level">
+      <option value="-1" disabled selected>Choisir la catégorie</option>
+      <option value="facile">Facile</option>
+      <option value="modéré">Modéré</option>
+      <option value="difficile">Difficile</option>
+    </select>
+  </div>
+     <div>
+    <label for="price">Coût</label>
+    <select id="price" name="price">
+      <option value="-1" disabled selected>Quel est le coût</option>
+      <option value="bon marché">Bon marché</option>
+      <option value="modéré">Modéré</option>
+      <option value="coûteux">Coûteux</option>
+    </select>
+  </div>
+  <button>Ajouter</button>
 </form>
