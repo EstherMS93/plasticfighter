@@ -1,12 +1,15 @@
 const express = require("express");
-const router = express.Router();
+const router = new express.Router();
+const bcrypt = require("bcrypt");
 const UserModel = require("./../models/user");
 
-/* GET users listing. */
+
+// redirection //
 router.get('/login', function(req, res, next) {
   res.render('auth/login');
 });
 
+// SignUP process //
 router.get('/signup', function(req, res, next) {
   res.render('auth/signup');
 });
@@ -18,22 +21,48 @@ router.post("/signup",  async (req, res, next) => {
     const foundUser = await UserModel.findOne({email: newUser.email });
 
     if (foundUser) {
-      res.redirect("/signup");
+      res.redirect("/login");
     } else {
 
       const hashedPassword = bcrypt.hashSync(newUser.password, 10);
       newUser.password = hashedPassword;
       await UserModel.create(newUser);
-      res.redirect("/index");
+      res.redirect("/");
     }
   } catch (err) {
-    let errorMessage = "";
-    for (field in err.errors) {
-      errorMessage += err.errors[field].message + "\n";
-    }
-    res.redirect("/auth/signup");
+    res.send("erreur");
   }
 });
 
+// SignIn Process //
+router.get('/signin', function(req, res, next) {
+  res.render('auth/login');
+});
+
+router.post("/signin", async (req, res, next) => {
+  console.log(req.body)
+  const { email, password } = req.body;
+  const foundUser = await UserModel.findOne({ email: email });
+  if (!foundUser) {
+    res.send("you must create an account");
+  } else {
+    const isSamePassword = bcrypt.compareSync(password, foundUser.password);
+    if (!isSamePassword) {
+      res.send("wrong password");
+    } else {
+      const userObject = foundUser.toObject();
+      delete userObject.password; 
+      req.session.currentUser = userObject;
+      res.redirect("/");
+    }
+  }
+ 
+});
+
+// LogOut //
+router.get('/logout', (req, res) => {
+  req.session.destroy();
+  res.redirect('/');
+});
 
 module.exports = router;

@@ -2,7 +2,7 @@
   <form method="post" action="/auth/signup">
     <div>
       <label for="name">Prénom</label>
-      <input name="name" type="text" class="input-text input" placeholder="Mireille" required>
+      <input name="name" id="name" type="text" class="input-text input" placeholder="Mireille" required>
     </div>
     <div >
       <label for="email" >Email</label>
@@ -16,9 +16,9 @@
       <label for="cp">Code Postal</label>
       <input name="cp" id="cp" type="number" placeholder="75011" required>
     </div>
-    <button>Create Account</button>
+    <button>Créer un compte</button>
   </form>
-  <p>Already have an account ? <a href="/auth/login">Sign In</a></p>
+  <p>Vous avez déjà un compte ?<a href="/auth/login">Connectez-vous !</a></p>
 </section>
 
 
