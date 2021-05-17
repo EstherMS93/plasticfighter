@@ -1,3 +1,24 @@
-<p>
-    yaya
-</p>
+<h2>Add a new recipe</h2>
+<form method="POST" action="/recipes/recipe-add" class="form">
+<label class="label" for="title">Title:</label>
+<input class="input" type="text" name="title" id="title">
+<label class="label" for="type">Type:</label>
+<input class="input" type="text" name="type" id="type">
+<label class="label" for="category">Category:</label>
+<input class="input" type="text" name="category" id="category">
+<label class="label" for="ingredients">Ingredients:</label>
+<input class="input" type="text" name="ingredients" id="ingredients" >
+<label class="label" for="description">Description:</label>
+<input class="input" type="text" name="description" id="description">
+
+<!--
+<label class="label" for="image">Image:</label>
+<input class="input" type="text" name="image" id="image"> -->
+<label class="label" for="duration">Duration:</label>
+<input class="input" type="number" name="duration" id="duration">
+<label class="label" for="level">Level:</label>
+<input class="input" type="text" name="level" id="level">
+<label class="label" for="price">Price:</label>
+<input class="input" type="text" name="price" id="price">
+<button>Add!</button>
+</form>
