@@ -1,0 +1,82 @@
+<h1>Update a recipe</h1>
+
+<form action="/recipes/recipe-edit/{{recipe._id}}" method="post">
+  <h3>Modifier votre recette</h3>
+  <div>
+    <label for="title">Titre</label>
+    <input
+      id="title"
+      name="title"
+      type="text"
+      placeholder="Shampoing solide"
+      value="{{recipe.titre}}"
+    />
+  </div>
+  <div>
+    <label for="type">Type</label>
+    <select id="type" name="type">
+      <option value="-1" disabled selected>Choisir le type</option>
+      <option value="recette">Recette</option>
+      <option value="tip">Tip</option>
+    </select>
+  </div>
+  <div>
+    <label for="category">Catégorie</label>
+    <select id="category" name="category">
+      <option value="-1" disabled selected>Choisir la catégorie</option>
+      <option value="maison">Maison</option>
+      <option value="cheveux">Cheveux</option>
+      <option value="visage">Visage</option>
+      <option value="hygiene">Hygiène</option>
+    </select>
+  </div>
+  <div>
+    <label for="ingredients">Ingrédients</label>
+    <input
+      id="ingredients"
+      name="ingredients"
+      type="textarea"
+      placeholder="Huile de ricin"
+      value="{{recipe.ingredients}}"
+    />
+  </div>
+    <div>
+    <label for="description">Description/ Etapes</label>
+    <input
+      id="description"
+      name="description"
+      type="textarea"
+      placeholder="Mettre dans un saladier"
+      value="{{recipe.description}}"
+    />
+  </div>
+  <div>
+    <label for="duration">Duration en minutes</label>
+    <input
+      id="duration"
+      name="duration"
+      type="number"
+      placeholder="ex: 20"
+      value="{{recipe.duration}}"
+    />
+  </div>
+   <div>
+    <label for="level">Niveau de difficulté</label>
+    <select id="level" name="level">
+      <option value="-1" disabled selected>Choisir la catégorie</option>
+      <option value="facile">Facile</option>
+      <option value="modéré">Modéré</option>
+      <option value="difficile">Difficile</option>
+    </select>
+  </div>
+     <div>
+    <label for="price">Coût</label>
+    <select id="price" name="price">
+      <option value="-1" disabled selected>Quel est le coût</option>
+      <option value="bon marché">Bon marché</option>
+      <option value="modéré">Modéré</option>
+      <option value="coûteux">Coûteux</option>
+    </select>
+  </div>
+  <button>Ajouter</button>
+</form>
