@@ -1,24 +1,68 @@
 <h2>Add a new recipe</h2>
 <form method="POST" action="/recipes/recipe-add" class="form">
+<div>
 <label class="label" for="title">Title:</label>
 <input class="input" type="text" name="title" id="title">
+<hr>
+</div>
+<div>
 <label class="label" for="type">Type:</label>
-<input class="input" type="text" name="type" id="type">
-<label class="label" for="category">Category:</label>
-<input class="input" type="text" name="category" id="category">
+ <select id="type" class="select" required name="select">
+        <option value="-1" disabled selected>Choose a type</option>
+        <option value="recette">Recette</option>
+        <option value="tip">Tip</option>
+<hr>
+</div>
+<div>
 <label class="label" for="ingredients">Ingredients:</label>
 <input class="input" type="text" name="ingredients" id="ingredients" >
-<label class="label" for="description">Description:</label>
-<input class="input" type="text" name="description" id="description">
-
+<hr>
+</div>
+<div>
+<label class="label" for="category">Category:</label>
+ <select id="category" class="select" required name="category">
+        <option value="-1" disabled selected>Choose a category</option>
+        <option value="maison">Maison</option>
+        <option value="cheveux">Cheveux</option>
+        <option value="visage">Visage</option>
+        <option value="hygiene">Hygiène</option>
+<hr>
+</div>
 <!--
 <label class="label" for="image">Image:</label>
 <input class="input" type="text" name="image" id="image"> -->
+<div>
 <label class="label" for="duration">Duration:</label>
 <input class="input" type="number" name="duration" id="duration">
+<hr>
+</div>
+
+<div>
 <label class="label" for="level">Level:</label>
-<input class="input" type="text" name="level" id="level">
+ <select id="level" class="select" required name="level">
+        <option value="-1" disabled selected>Choose a level</option>
+        <option value="facile">Facile</option>
+        <option value="modere">Modéré</option>
+        <option value="difficile">Difficile</option>
+<hr>
+</div>
+
+<div>
+<label class="label" for="description">Description:</label>
+<input class="input" type="text" name="description" id="description">
+<hr>
+</div>
+
+<div>
 <label class="label" for="price">Price:</label>
-<input class="input" type="text" name="price" id="price">
+<select id="price" class="select" required name="price">
+        <option value="-1" disabled selected>Choose a price</option>
+        <option value="bon">Bon marché</option>
+        <option value="modere">Modéré</option>
+        <option value="cher">Cher</option>
+<hr>
+</div>
+
 <button>Add!</button>
+
 </form>
