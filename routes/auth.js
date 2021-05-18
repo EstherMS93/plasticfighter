@@ -6,7 +6,7 @@ const UserModel = require("./../models/user");
 
 // redirection //
 router.get('/login', function(req, res, next) {
-  res.render('auth/login', {style: 'auth.css'});
+  res.render('auth/login');
 });
 
 // SignUP process //
