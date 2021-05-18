@@ -1,45 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Farro:wght@500&family=Noto+Sans+JP:wght@300&display=swap');
-
-
-
 body {
-    font-size: 20px;
-  }
-  
-  h1{
-    font-family: 'Noto Sans JP', sans-serif;
-  }
+  font-size: 20px;
+}
 
-  .logo-text {
-    font-family: 'Farro', sans-serif;
-    color: #07998F ;
-    font-size: 30px;
-  }
-  
-  .logo{ 
-    width: 100px;
-  }
-  
-  #header-main {
-    padding: 5px 20px;
-    background:#FFB133;
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    z-index: 1;
-  }
-  
-  #header-main .link {
-    color: #07998F;
-  }
-  
-  #header-main .link:hover {
-    color: rgb(255, 146, 30);
-  }
-  
-  #content-main {
-      padding: 5px 10px;
-    }
-    
+h1 {
+  font-family: KoHo;
+}
+
+.logo-text {
+  font-family: KoHo;
+  color: #07998f;
+  font-size: 30px;
+}
+
+.logo {
+  width: 100px;
+}
+
+#header-main {
+  padding: 5px 20px;
+  background: #ffb133;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+#header-main .link {
+  color: #07998f;
+}
+
+#header-main .link:hover {
+  color: rgb(255, 146, 30);
+}
+
+#content-main {
+  padding: 5px 10px;
+}
