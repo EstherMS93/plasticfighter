@@ -3,7 +3,7 @@ var router = express.Router();
 var router = new express.Router();
 var RecipeModel = require("./../models/recipe");
 
-// Add a recipe //
+///////////////// Add a recipe ///////////////// 
 router.get('/recipe-add', function(req, res, next) {
     res.render('recipes/recipe-add');
   });
@@ -19,7 +19,7 @@ router.get('/recipe-add', function(req, res, next) {
     }
   });
 
-  // Get detail from a recipe // (ok working)
+ ///////////////// Get detail from a recipe ///////////////// (ok working)
   router.get("/recipe-detail/:id", (req, res, next) => {
     RecipeModel.findById(req.params.id)
     .then((list)=>{
@@ -33,7 +33,7 @@ router.get('/recipe-add', function(req, res, next) {
 })
 
 
-// Display all recipes // Just for a test !
+/////////////////  Display all recipes /////////////////  Just for a test !
 router.get("/allrecipes", async (req, res, next) => {
   const list = await RecipeModel.find()
   try {
@@ -43,7 +43,23 @@ router.get("/allrecipes", async (req, res, next) => {
   }
 });
 
-// Delete one recipe //
+/////////////////  Edit a recipe ///////////////// 
+router.get("/recipe-edit/:id", async (req, res, next) => {
+  try {
+    res.render("recipes/recipe-edit", await RecipeModel.findById(req.params.id));
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post("/recipe-edit/:id", (req, res, next) => {
+  RecipeModel.findByIdAndUpdate(req.params.id, req.body)
+    .then(() => res.redirect("/recipes/allrecipes"))
+    .catch(() => res.send("erreur"));
+});
+
+
+/////////////////  Delete one recipe ///////////////// 
 router.get("/recipe-detail/delete/:id", async (req,res)=>{
   try {
       await RecipeModel.findByIdAndRemove(req.params.id);

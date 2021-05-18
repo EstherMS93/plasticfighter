@@ -1,7 +1,6 @@
-<h1>Update a recipe</h1>
+<h1>Modifier votre recette</h1>
 
-<form action="/recipes/recipe-edit/{{recipe._id}}" method="post">
-  <h3>Modifier votre recette</h3>
+<form action="/recipes/recipe-edit/{{_id}}" method="post">
   <div>
     <label for="title">Titre</label>
     <input
@@ -9,13 +8,13 @@
       name="title"
       type="text"
       placeholder="Shampoing solide"
-      value="{{recipe.titre}}"
+      value="{{title}}"
     />
   </div>
   <div>
     <label for="type">Type</label>
     <select id="type" name="type">
-      <option value="-1" disabled selected>Choisir le type</option>
+      <option value="-1" disabled selected>{{type}}</option>
       <option value="recette">Recette</option>
       <option value="tip">Tip</option>
     </select>
@@ -23,7 +22,7 @@
   <div>
     <label for="category">Catégorie</label>
     <select id="category" name="category">
-      <option value="-1" disabled selected>Choisir la catégorie</option>
+      <option value="-1" disabled selected>{{category}}</option>
       <option value="maison">Maison</option>
       <option value="cheveux">Cheveux</option>
       <option value="visage">Visage</option>
@@ -37,7 +36,7 @@
       name="ingredients"
       type="textarea"
       placeholder="Huile de ricin"
-      value="{{recipe.ingredients}}"
+      value="{{ingredients}}"
     />
   </div>
     <div>
@@ -47,7 +46,7 @@
       name="description"
       type="textarea"
       placeholder="Mettre dans un saladier"
-      value="{{recipe.description}}"
+      value="{{description}}"
     />
   </div>
   <div>
@@ -57,13 +56,13 @@
       name="duration"
       type="number"
       placeholder="ex: 20"
-      value="{{recipe.duration}}"
+      value="{{duration}}"
     />
   </div>
    <div>
     <label for="level">Niveau de difficulté</label>
     <select id="level" name="level">
-      <option value="-1" disabled selected>Choisir la catégorie</option>
+      <option value="-1" disabled selected>{{level}}</option>
       <option value="facile">Facile</option>
       <option value="modéré">Modéré</option>
       <option value="difficile">Difficile</option>
@@ -72,7 +71,7 @@
      <div>
     <label for="price">Coût</label>
     <select id="price" name="price">
-      <option value="-1" disabled selected>Quel est le coût</option>
+      <option value="-1" disabled selected>{{price}}</option>
       <option value="bon marché">Bon marché</option>
       <option value="modéré">Modéré</option>
       <option value="coûteux">Coûteux</option>
