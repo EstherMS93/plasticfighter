@@ -19,7 +19,7 @@ const recipeSchema = new Schema(
     duration: Number,
   level: {type: String, enum: ['facile', 'modéré', 'difficile']},
   price: {type: String, enum: ['bon marché', 'modéré', 'coûteux']},
-  //  id_users: {type: Schema.Types.ObjectId, ref: 'user'}
+  user: {type: Schema.Types.ObjectId, ref: 'user'}
   },
   {
     timestamps: true

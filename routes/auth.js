@@ -39,6 +39,10 @@ router.get('/signin', function(req, res, next) {
   res.render('auth/login');
 });
 
+router.get('/myaccount', function(req, res, next) {
+  res.render('auth/myaccount');
+});
+
 router.post("/signin", async (req, res, next) => {
   console.log(req.body)
   const { email, password } = req.body;
@@ -53,11 +57,27 @@ router.post("/signin", async (req, res, next) => {
       const userObject = foundUser.toObject();
       delete userObject.password; 
       req.session.currentUser = userObject;
-      res.redirect("/");
+      res.redirect(`/auth/myaccount/${req.session.currentUser._id}`);
     }
   }
  
 });
+
+/// get detail from a user ///
+router.get("/myaccount/:id", (req, res, next) => {
+
+  UserModel.findById(req.params.id)
+  .then((list)=>{
+
+      res.render("auth/myaccount", {
+          user: list,
+      });
+  })
+  .then((err)=> {
+      next(err);
+  })
+})
+
 
 // LogOut //
 router.get('/logout', (req, res) => {
