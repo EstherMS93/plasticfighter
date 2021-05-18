@@ -1,6 +1,6 @@
 <h1>Add a recipe</h1>
 
-<form action="/recipes/recipe-add" method="post" enctype="multipart/form-data">
+<form action="/recipes/recipe-add" method="post" id="recipe-form">
   <h3>Ajouter votre recette ou votre tip ci-dessous:</h3>
   <div>
     <label for="title">Titre</label>
@@ -96,8 +96,5 @@
       <option value="coûteux">Coûteux</option>
     </select>
   </div>
-  <label for="image">Choose a profile picture:</label>
-  <input type="file" id="image" name="image" accept="image/png, image/jpeg" />
-
-  <button><i class="fas fa-plus"></i></button>
+  <button id="form-button"><i class="fas fa-plus"></i></button>
 </form>

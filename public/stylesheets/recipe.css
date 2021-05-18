@@ -1,14 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap');
-* {
-    font-family: KoHo;
-    font-size: 1em;
-}
-h1 {
-    text-align: center;
-    font-size: 4rem;
-    color: #07998F;
-}
-form {
+
+#recipe-form {
  text-align: center;
 }
 .text-input {
@@ -26,7 +17,7 @@ form {
     padding: 0.5%;
     width: 51vw;
 }
- button {
+#form-button {
     margin: 2%;
     padding: 1%;
     border: none;
@@ -34,7 +25,7 @@ form {
     color: #07998F;
     font-size: 4em;
  }
- button:hover {
+ #form-button:hover {
     color: #FFB133;
     cursor: pointer;
  }
