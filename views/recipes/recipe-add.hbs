@@ -3,26 +3,27 @@
 <form action="/recipes/recipe-add" method="post">
   <h3>Ajouter votre recette ou votre tip ci-dessous:</h3>
   <div>
-    <label for="title">Titre</label>
+    <label for="title">Titre</label> <br>
     <input
       id="title"
       name="title"
       type="text"
       placeholder="Shampoing solide"
       value="Shampoo"
+      class="text-input"
     />
   </div>
   <div>
-    <label for="type">Type</label>
-    <select id="type" name="type">
+    <label for="type">Type</label> <br>
+    <select id="type" name="type"  class="menu text-input">
       <option value="-1" disabled selected>Choisir le type</option>
       <option value="recette">Recette</option>
       <option value="tip">Tip</option>
     </select>
   </div>
   <div>
-    <label for="category">Catégorie</label>
-    <select id="category" name="category">
+    <label for="category">Catégorie</label> <br>
+    <select id="category" name="category" class="menu text-input">
       <option value="-1" disabled selected>Choisir la catégorie</option>
       <option value="maison">Maison</option>
       <option value="cheveux">Cheveux</option>
@@ -31,38 +32,45 @@
     </select>
   </div>
   <div>
-    <label for="ingredients">Ingrédients</label>
-    <input
+    <label for="ingredients">Ingrédients</label> <br>
+    <textarea
       id="ingredients"
       name="ingredients"
-      type="textarea"
+      wrap="hard"
       placeholder="Huile de ricin"
       value="Huile de coco"
-    />
+      cols="30" 
+      rows="10"
+      class="text-input big">
+    </textarea>
   </div>
     <div>
-    <label for="description">Description/ Etapes</label>
-    <input
+    <label for="description">Description/ Etapes</label> <br>
+    <textarea
       id="description"
       name="description"
-      type="textarea"
+      wrap="hard"
       placeholder="Mettre dans un saladier"
       value="En premier ..."
-    />
+      cols="30" 
+      rows="10"
+      class="text-input big">
+    </textarea>
   </div>
   <div>
-    <label for="duration">Duration en minutes</label>
+    <label for="duration">Duration en minutes</label> <br>
     <input
       id="duration"
       name="duration"
       type="number"
       placeholder="ex: 20"
       value="20"
+      class="text-input"
     />
   </div>
    <div>
-    <label for="level">Niveau de difficulté</label>
-    <select id="level" name="level">
+    <label for="level">Niveau de difficulté</label> <br>
+    <select id="level" name="level" class="menu text-input">
       <option value="-1" disabled selected>Choisir la catégorie</option>
       <option value="facile">Facile</option>
       <option value="modéré">Modéré</option>
@@ -70,13 +78,13 @@
     </select>
   </div>
      <div>
-    <label for="price">Coût</label>
-    <select id="price" name="price">
+    <label for="price">Coût</label> <br>
+    <select id="price" name="price" class="menu text-input">
       <option value="-1" disabled selected>Quel est le coût</option>
       <option value="bon marché">Bon marché</option>
       <option value="modéré">Modéré</option>
       <option value="coûteux">Coûteux</option>
     </select>
   </div>
-  <button>Ajouter</button>
+  <button><i class="fas fa-plus"></i></button>
 </form>
