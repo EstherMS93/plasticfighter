@@ -7,10 +7,10 @@ const logUser = require ("./../middlewares/protectRoute")
 ///////////////// Add a recipe /////////////////
 
 router.get('/recipe-add', function(req, res, next) {
-  res.render('recipes/recipe-add', {style: 'recipe.css'});
+  res.render('recipes/recipe-add');
 });
 
-router.post("/recipe-add", async (req, res, next) => {
+router.post("/recipe-add", logUser, async (req, res, next) => {
   const newRecipe = { ...req.body };
   newRecipe.user = req.session.currentUser._id;
   
@@ -24,8 +24,10 @@ router.post("/recipe-add", async (req, res, next) => {
 
 ///////////////// Get detail from a recipe ///////////////// (ok working)
 router.get("/recipe-detail/:id", (req, res, next) => {
+  console.log("detail", req.params.id)
   RecipeModel.findById(req.params.id)
     .then((list) => {
+      console.log(list)
       res.render("recipes/recipe-detail", {
         recipe: list,
       });

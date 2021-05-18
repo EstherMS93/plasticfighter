@@ -11,14 +11,14 @@ const recipeSchema = new Schema(
       },
    ingredients: String,
    description: String,
-    //image: {
-    //    type: String,
-     //   default: "#",
-    //  },
    // rating: Number, 
     duration: Number,
   level: {type: String, enum: ['facile', 'modéré', 'difficile']},
   price: {type: String, enum: ['bon marché', 'modéré', 'coûteux']},
+    image: {
+       type: String,
+       default: "/images/testimage.png",
+  },
   user: {type: Schema.Types.ObjectId, ref: 'user'}
   },
   {
