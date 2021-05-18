@@ -1,15 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@500&family=Noto+Sans+JP:wght@300&display=swap');
+
+
+
 body {
     font-size: 20px;
   }
   
+  h1{
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
   .logo-text {
-    font-family: koho;
+    font-family: 'Farro', sans-serif;
     color: #07998F ;
     font-size: 30px;
   }
   
   .logo{ 
-    width: 100%;
+    width: 100px;
   }
   
   #header-main {

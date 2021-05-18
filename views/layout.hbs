@@ -2,29 +2,28 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/{{style}}'/>
+    <link rel='stylesheet' href='/stylesheets/layout.css'/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/14a96cbf57.js" crossorigin="anonymous"></script>
-
-
-
-
   </head>
   <body>
 
     <header id="header-main">
     <span id="logo-main">
-      <img src="./public/design-gradient/proj2-logo-final-copie-01.png" alt="logo">
+      <img class="logo" src="/images/logo.png" alt="logo">
       </span>
       <p class="logo-text">PLASTIC FIGHTER</p>
     
+    <div> <a href="/auth/signup" class="link"><i class="fas fa-sign-in-alt"></i></a>
+    <a href="/recipes/recipe-add" class="link">Add recipe<i class="fa fa-plus" aria-hidden="true"></i></a>
+    <a href="/" class="link">home</a>
+    </div>
     <nav>
-      <a href="/" class="link">home</a> |
-      <a href="/recipes/recipe-add" class="link">Add recipe<i class="fa fa-plus" aria-hidden="true"></i></a>
-       <a href="/auth/signup" class="link"><i class="fas fa-sign-in-alt"></i></a><!-- icone en haut-->
-       <a href="/auth/signout" class="link"><i class="icon-signout"></i></a><!-- icone quand on est connecté DOM?-->
-       <a href="/recipes/allrecipes" class="link">Toutes les recettes</i></a><!-- juste pour tests-->
+      <a href="#" class="link">Maison</a>
+      <a href="#" class="link">Visage</a>
+      <a href="#" class="link">Hygiène</a>
+      <a href="#" class="link">Cheveux</a>
     </nav>
   </header>
     {{{body}}}
