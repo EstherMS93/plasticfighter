@@ -7,7 +7,7 @@ const logUser = require ("./../middlewares/protectRoute")
 ///////////////// Add a recipe /////////////////
 
 router.get('/recipe-add', function(req, res, next) {
-  res.render('recipes/recipe-add', {style: 'recipe.css'});
+  res.render('recipes/recipe-add');
 });
 
 router.post("/recipe-add", async (req, res, next) => {

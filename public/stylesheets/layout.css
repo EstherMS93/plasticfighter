@@ -1,9 +1,13 @@
-body {
-  font-size: 20px;
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap');
+* {
+    font-family: KoHo;
+    font-size: 1em;
 }
 
 h1 {
-  font-family: KoHo;
+  text-align: center;
+  font-size: 4rem;
+  color: #07998F;
 }
 
 .logo-text {
