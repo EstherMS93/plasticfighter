@@ -1,0 +1,37 @@
+body {
+    font-size: 20px;
+  }
+  
+  .logo-text {
+    font-family: koho;
+    color: #07998F ;
+    font-size: 30px;
+  }
+  
+  .logo{ 
+    width: 100%;
+  }
+  
+  #header-main {
+    padding: 5px 20px;
+    background:#FFB133;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 1;
+  }
+  
+  #header-main .link {
+    color: #07998F;
+  }
+  
+  #header-main .link:hover {
+    color: rgb(255, 146, 30);
+  }
+  
+  #content-main {
+      padding: 5px 10px;
+    }
+    

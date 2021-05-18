@@ -1,0 +1,122 @@
+/* img.preview {
+    max-width: 300px;
+  }
+  
+  img.thumbnail {
+    max-width: 48px;
+  }
+  
+  .is-hidden {
+    display: none !important;
+  }
+  
+  .row.artist,
+  .row.album,
+  .row.label,
+  .row.style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .row.artist .infos,
+  .row.album .infos,
+  .row.style .infos,
+  .row.label .infos {
+    display: flex;
+    align-items: center;
+  }
+  
+  .row .btns > * {
+    cursor: pointer;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: overpass-mono;
+  }
+  
+  .title.small {
+    font-size: 1.05rem;
+  }
+  
+  #logo-main a {
+    font-size: 1.4rem;
+    color: rgb(240, 25, 25);
+    font-family: overpass-mono;
+  }
+  
+  #search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    height: 32px;
+    margin-bottom: 20px;
+  }
+  
+  #search-bar .input {
+    flex: 1;
+    padding: 5px 0 5px 20px;
+    outline: none;
+  }
+  
+  #search-bar .btn {
+    flex: 0 0 32px;
+    height: inherit;
+    outline: none;
+  }
+  
+  .link.album {
+    color: #9c27b0;
+  }
+  
+  .link.artist {
+    color: #8bc34a;
+  }
+  
+  .link.label {
+    color: #ff9800;
+  }
+  
+  .link.style {
+    color: dodgerblue;
+  }
+  
+  .table {
+    width: 100%;
+    max-width: 748px;
+    min-width: 300px;
+  }
+  
+  .table,
+  .table .cell {
+    border-collapse: collapse;
+    border: 1px solid;
+  }
+  
+  .table .cell {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .table .cell.image,
+  .table .cell.logo,
+  .table .cell.picture {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .table .cell.color .box {
+    height: 24px;
+    width: 24px;
+    margin: auto;
+  }
+  
+  .artist.details .picture {
+    max-width: 220px;
+  }
+   */
