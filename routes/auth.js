@@ -2,6 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const bcrypt = require("bcrypt");
 const UserModel = require("./../models/user");
+const logUser = require ("./../middlewares/protectRoute")
 
 
 // redirection //
@@ -39,7 +40,7 @@ router.get('/signin', function(req, res, next) {
   res.render('auth/login');
 });
 
-router.get('/myaccount', function(req, res, next) {
+router.get('/myaccount', logUser, function(req, res, next) {
   res.render('auth/myaccount');
 });
 

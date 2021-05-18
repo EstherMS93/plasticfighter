@@ -3,22 +3,25 @@ var router = express.Router();
 var router = new express.Router();
 var RecipeModel = require("./../models/recipe");
 const logUser = require ("./../middlewares/protectRoute")
+const uploader = require ("./../config/cloudinary")
 
 ///////////////// Add a recipe /////////////////
 
-router.get('/recipe-add', function(req, res, next) {
+router.get('/recipe-add', logUser, function(req, res, next) {
   res.render('recipes/recipe-add');
 });
 
-router.post("/recipe-add", logUser, async (req, res, next) => {
+router.post("/recipe-add", logUser, uploader.single("image"), async (req, res, next) => {
   const newRecipe = { ...req.body };
   newRecipe.user = req.session.currentUser._id;
-  
+  if (req.file) {
+    newRecipe.image = req.file.secure_url;
+  }
   try {
     await RecipeModel.create(newRecipe);
     res.redirect("/");
   } catch (err) {
-    res.send("erreur");
+    res.send(err);
   }
 });
 
