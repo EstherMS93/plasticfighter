@@ -21,13 +21,13 @@ router.post("/signup",  async (req, res, next) => {
     const foundUser = await UserModel.findOne({email: newUser.email });
 
     if (foundUser) {
-      res.redirect("/login");
+      res.redirect("/auth/login");
     } else {
 
       const hashedPassword = bcrypt.hashSync(newUser.password, 10);
       newUser.password = hashedPassword;
       await UserModel.create(newUser);
-      res.redirect("/");
+      res.redirect("/auth/login");
     }
   } catch (err) {
     res.send("erreur");

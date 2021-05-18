@@ -45,6 +45,7 @@ router.get("/allrecipes/:category", async (req, res, next) => {
   }
 });
 
+
 /////////////////  Edit a recipe /////////////////
 router.get("/recipe-edit/:id", async (req, res, next) => {
   try {
@@ -67,7 +68,7 @@ router.post("/recipe-edit/:id", (req, res, next) => {
 router.get("/recipe-detail/delete/:id", async (req, res) => {
   try {
     await RecipeModel.findByIdAndRemove(req.params.id);
-    res.redirect("/recipes/allrecipes");
+    res.redirect("/");
   } catch (err) {
     next(err);
   }
