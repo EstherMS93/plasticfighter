@@ -1,3 +1,5 @@
-@import url("./layout.css");
-@import url("./index.css");
-@import url("./recipe.css");
+@import url("/stylesheets/layout.css");
+@import url("/stylesheets/recipe.css");
+@import url("/stylesheets/recipeone.css");
+@import url("/stylesheets/recipe-category.css");
+@import url("/stylesheets/auth.css");
