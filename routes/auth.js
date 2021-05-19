@@ -3,7 +3,7 @@ const router = new express.Router();
 const bcrypt = require("bcrypt");
 const UserModel = require("./../models/user");
 const logUser = require ("./../middlewares/protectRoute")
-
+const RecipeModel = require ("./../models/recipe")
 
 // redirection //
 router.get('/login', function(req, res, next) {
@@ -67,17 +67,28 @@ router.post("/signin", async (req, res, next) => {
 /// get detail from a user ///
 router.get("/myaccount/:id", (req, res, next) => {
 
-  UserModel.findById(req.params.id)
-  .then((list)=>{
+//RecipeModel.find({ user: req.session.currentUser._id }).populate("user").then(recipes => {
 
-      res.render("auth/myaccount", {
-          user: list,
-      });
+    RecipeModel.find({ user: req.session.currentUser._id }).then(recipes => {
+
+    // print first recipe name
+
+console.log(recipes[0].user.name)
+
+
+    res.render("auth/myaccount", {
+        recipes,
+    });
+
+  }).catch()
+ 
+
   })
-  .then((err)=> {
-      next(err);
-  })
-})
+
+
+
+//////////// Render all recipes from a user ////////////
+
 
 
 // LogOut //

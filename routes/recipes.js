@@ -2,8 +2,10 @@ var express = require("express");
 var router = express.Router();
 var router = new express.Router();
 var RecipeModel = require("./../models/recipe");
+var UserModel = require("./../models/user")
 const logUser = require ("./../middlewares/protectRoute")
 const uploader = require ("./../config/cloudinary")
+
 
 ///////////////// Add a recipe /////////////////
 
@@ -28,7 +30,7 @@ router.post("/recipe-add", logUser, uploader.single("image"), async (req, res, n
 ///////////////// Get detail from a recipe ///////////////// (ok working)
 router.get("/recipe-detail/:id", (req, res, next) => {
   console.log("detail", req.params.id)
-  RecipeModel.findById(req.params.id)
+  RecipeModel.findById(req.params.id).populate("user")
     .then((list) => {
       console.log(list)
       res.render("recipes/recipe-detail", {
@@ -78,5 +80,7 @@ router.get("/recipe-detail/delete/:id", async (req, res) => {
     next(err);
   }
 });
+
+
 
 module.exports = router;
