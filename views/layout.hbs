@@ -1,34 +1,47 @@
 <html>
   <head>
-    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/layout.css" />
     <script
       src="https://kit.fontawesome.com/14a96cbf57.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" media="(media-features)" href="layout.css" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
+
   </head>
 
-
+  <div class="responsive-div">
     <header id="header-main">
-     <span>   
-      <div class="uppernav"> 
-        
-      <img src="/images/logo.png" alt="logo" class="logo" />      
-      <p class="logo-text">PLASTIC FIGHTER</p>      
-      <a href="/auth/signup" class="user-icon"><i class="fas fa-user-alt"></i></a>
-      </div>
-     </span>
 
-     <span>
-        <div class="lowernav" >     
-        <a href="/recipes/allrecipes/maison" class="link">Maison</a>
-        <a href="/recipes/allrecipes/visage" class="link">Visage</a>
-        <a href="/recipes/allrecipes/hygiene" class="link">Hygiène</a>
-        <a href="/recipes/allrecipes/cheveux" class="link">Cheveux</a>
-       </div>
+      <span>
+        <div class="uppernav">
+          <a href="/index">
+            <img src="/images/logo.png" alt="logo" class="logo" />
+          </a>
+          <p class="logo-text">PLASTIC FIGHTER</p>
+          <a href="/auth/signup" class="user-icon"><i
+              class="fas fa-user-alt"
+            ></i></a>
+        </div>
       </span>
-      <hr>
-    </header>
 
-    {{{body}}}
-  </body>
+      <nav>
+        <div class="lowernav">
+          <a href="/recipes/allrecipes/maison" class="link">Maison</a>
+          <a href="/recipes/allrecipes/visage" class="link">Visage</a>
+          <a href="/recipes/allrecipes/hygiene" class="link">Hygiène</a>
+          <a href="/recipes/allrecipes/cheveux" class="link">Cheveux</a>
+        </div>
+      </nav>
+      <div class="line"></div>
+    </header>
+    <body>
+      {{{body}}}
+    </body>
+  </div>
 </html>

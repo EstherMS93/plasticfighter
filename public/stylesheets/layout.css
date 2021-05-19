@@ -1,69 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap");
+
+/* @media {
+  
+} */
+
+
 * {
-    font-family: KoHo;
+  font-family: KoHo;
+  margin: 0;
+  padding: 0;
 }
+
+body{
+  background:white ;
+}
+
+
+/* html {
+  font-size: 10px;
+  width: 1100px;
+} */
 
 h1 {
   text-align: center;
   font-size: 4rem;
-  color: #07998F;
+  color: #07998f;
 }
 
+/*NAV BAR ELEMENTS*/
 .uppernav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .logo-text {
-  position: relative;
+  position: absolute;
   font-family: KoHo;
-  font-size: 10em;
+  font-size: 15em;
   color: #07998f;
-  font-size: 3em;
+  font-size: 5em;
   display: flex;
   flex-direction: column;
   margin: 20px;
-  padding-left: 100px;
-  padding-right: 430px;
+  padding-left: 250px;
 }
 
 .logo {
-  width: 7%;
+  width: 15%;
   display: flex;
   flex-direction: column;
-  padding-left: 90px;
 }
 
-.user-icon{
-  font-size: 40px;
-  color: #07998F;
+.user-icon {
+  position: relative;
+  font-size: 30px;
+  color: #07998f;
   display: flex;
   flex-direction: column;
-  padding-right: 80px;
+  padding-right: 20px;
 }
 
-.lowernav{
+.lowernav {
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
 .link {
-  display:flex;
+  font-weight: bolder;
+  font-size: 25px;
+  text-decoration: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  padding-right: 250px;
-  text-decoration: none;
-  font-weight: bolder;
-
+  padding-right: 120px;
 }
 
-.hr{
-  color:rgb(255, 146, 30);
+.line {
+  width: 1800px;
+  height: 1px;
+  border: 2px solid rgb(255, 146, 30);
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgb(255, 146, 30);
 }
 
 #header-main {
@@ -88,4 +110,26 @@ h1 {
 
 #content-main {
   padding: 5px 10px;
+}
+
+
+/*IMAGES HOMEPAGE*/
+
+.homephoto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photos{
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-title{
+  position: relative;
+  width: 100px;
+  height: 50px;
+  background-color: blue;
 }
