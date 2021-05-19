@@ -1,8 +1,29 @@
-button {
-    margin: 2%;
-    padding: 1%;
-    border: none;
-    background-color: white;
-    color: #b89149;
-    font-size: 2em;
- }
+.addrecipe {
+  background-color: rgb(255, 146, 30);
+  color: white;
+}
+
+.editprofil {
+  background-color: white;
+  color: black;
+}
+
+.account-btn {
+  padding: 1%;
+  border: none;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.account-btn:hover {
+  padding: 1%;
+  border: none;
+  font-size: 1em;
+  text-decoration: none;
+  background-color: #07998f;
+  color: white;
+}
+
+#section-profil{
+    margin: 3% 0;
+}

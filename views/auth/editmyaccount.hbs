@@ -1,4 +1,4 @@
-  <form method="post" action="/auth/signup">
+  <form method="post" action="/auth/editmyaccount/{{_id}}">
     <div>
       <label for="name">Prénom</label>
       <input name="name" id="name" type="text" class="input-text input" placeholder="Mireille" value="{{name}}" required>
@@ -7,14 +7,10 @@
       <label for="email" >Email</label>
       <input name="email" id="email" type="email" class="input-text input" placeholder="yoyo@gmail.com" value="{{email}}" required >
     </div>
-    <div >
-      <label for="password">Password</label>
-      <input name="password" id="password" type="password" placeholder="••••••" value="{{password}}" required>
-    </div>
         <div >
       <label for="cp">Code Postal</label>
-      <input name="cp" id="cp" type="number" placeholder="75011"  value="{{cp}}" required>
+      <input name="cp" id="cp" type="number" placeholder="75011"  value="{{cp}}" >
     </div>
-    <button>Valider mes informations</button>
+    <button>Modifier mes informations</button>
   </form>
 </section>

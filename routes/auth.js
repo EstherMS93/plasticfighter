@@ -66,26 +66,34 @@ router.post("/signin", async (req, res, next) => {
 
 /// get detail from a user ///
 router.get("/myaccount/:id", (req, res, next) => {
-
-//RecipeModel.find({ user: req.session.currentUser._id }).populate("user").then(recipes => {
-
-    RecipeModel.find({ user: req.session.currentUser._id }).then(recipes => {
-
-    // print first recipe name
-
-console.log(recipes[0].user.name)
-
-
-    res.render("auth/myaccount", {
-        recipes,
-    });
-
-  }).catch()
- 
-
+  UserModel.findById(req.params.id)
+  .then((list)=>{
+      res.render("auth/myaccount", {
+          user: list,
+      });
   })
+  .then((err)=> {
+      next(err);
+  })
+})
 
 
+router.get("/editmyaccount/:id", async (req, res, next) => {
+  try {
+    res.render(
+      "auth/editmyaccount",
+      await UserModel.findById(req.params.id)
+    );
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post("/editmyaccount/:id", (req, res, next) => {
+  UserModel.findByIdAndUpdate(req.params.id, req.body)
+    .then(() => res.redirect("/"))
+    .catch(() => res.send("erreur"));
+});
 
 //////////// Render all recipes from a user ////////////
 
