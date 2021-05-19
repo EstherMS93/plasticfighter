@@ -1,15 +1,22 @@
-<p>
-    Hello {{user.name}}!!!
-</p>
-<p>Welcome back!</p>
 
-<p>Ci-dessous toutes les recettes que vous avez créées:</p>
+<div id="sectionaccount">
+<h2>Hello {{user.name}}!</h2>
 
- <a href="/recipes/recipe-add"><i
+ <a class="cta"  href="/recipes/recipe-add"><i
             class="fa fa-plus"
             aria-hidden="true"
-          ></i>Add recipe</a>
-      </div>
+          ></i>Ajouter une recette</a>
+</div>
 
-       <a href="/auth/logout">LogOut</a>
-      </div>
+<h2 class="sub-title">Vos recettes</h2>
+<ul>
+    {{#each movies}}
+    <li>
+        <h2>{{this.title}}</h2>
+        <img src="{{this.image}}" alt=cover for the movie {{this.title}}>
+        <a href="/recipes/recipe-detail/{{this._id}}">Voir la recette</a>
+        <a href="/recipes/recipe-edit/{{this._id}}">Modifier la recette</a>
+        <a href="/recipes/recipe-detail/delete/{{this._id}}">Supprimer</a>
+    </li>
+    {{/each}}
+</ul>
