@@ -1,5 +1,11 @@
 
-#recipe-form {
+.form-header {
+      text-align: center;
+      font-size: 4rem;
+      color: #07998F;
+    }
+
+.recipe-form {
  text-align: center;
 }
 .text-input {
@@ -15,9 +21,9 @@
 }
 .menu {
     padding: 0.5%;
-    width: 51vw;
+    width: 50vw;
 }
-#form-button {
+.form-button {
     margin: 2%;
     padding: 1%;
     border: none;
@@ -25,7 +31,22 @@
     color: #07998F;
     font-size: 4em;
  }
- #form-button:hover {
+ .form-button:hover {
     color: #FFB133;
+    cursor: pointer;
+ }
+ input[type="file"] {
+    display: none;
+ }
+
+ .fa-camera-retro {
+    padding: 0.5%;
+    font-size: 2rem;
+     color: darkslategrey;
+     border: gray solid 0.5px;
+     width: 49vw;
+     margin-top: 1%;
+ }
+ .fa-camera-retro:hover{
     cursor: pointer;
  }
