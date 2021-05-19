@@ -1,0 +1,38 @@
+ 
+ .container-recipe{
+    display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+    color: #07998F;
+    font-size: 1em; 
+	
+ }
+
+ .container-recipe-sub{
+	 width: 40%;
+	 border-width: 2px;
+	 border-style: solid;
+	 border-color: #eee;
+	 border-radius: 20px;
+ }
+
+ .imgcat{
+	 height: 150px;
+ }
+
+ .tab-mini li {
+	 list-style: none;
+ }
+
+ .tab-mini li a {
+	 text-decoration: none;
+ }
+
+ .allcontainers{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+}

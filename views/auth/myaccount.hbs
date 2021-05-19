@@ -2,6 +2,12 @@
 <div id="sectionaccount">
 <h2>Hello {{user.name}}!</h2>
 
+{{#each recipes}}
+{{this.user.name}}
+{{/each}}
+
+
+
  <a class="cta"  href="/recipes/recipe-add"><i
             class="fa fa-plus"
             aria-hidden="true"

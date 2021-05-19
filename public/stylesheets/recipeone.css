@@ -15,6 +15,7 @@
 
 #section-description {
     margin: 7% 3%;
+    width: 50%;
 }
 
 .sub-title {
@@ -28,6 +29,7 @@
 
 #imgdescription{
     height: 250px;
+    margin-right: 2%;
 }
 
 .cta {
@@ -47,4 +49,19 @@
 	align-items: stretch;
 	align-content: stretch;
     margin-top: 3%;
+}
+
+.icon-onerecipe{
+    color: #FFB133;
+}
+
+.auteur{
+    color: #07998F;
+    font-style: italic;
+}
+
+.one-recipe-title{
+    color: #07998F;
+    font-size: 3em;
+    text-align: center;
 }
