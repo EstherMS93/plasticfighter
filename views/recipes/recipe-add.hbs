@@ -1,7 +1,12 @@
-<h1>Add a recipe</h1>
+<h1 class="form-header">Add a recipe</h1>
 
-<form action="/recipes/recipe-add" method="post" id="recipe-form" enctype="multipart/form-data" >
-  <h3>Ajouter votre recette ou votre tip ci-dessous:</h3>
+<form
+  action="/recipes/recipe-add"
+  method="post"
+  class="recipe-form"
+  enctype="multipart/form-data"
+>
+  <h3>Ajoutez votre recette ou votre tip ci-dessous:</h3>
   <div>
     <label for="title">Titre</label>
     <br />
@@ -96,11 +101,17 @@
       <option value="coûteux">Coûteux</option>
     </select>
   </div>
-  <label for="image">Choose a profile picture:</label>
-
-<input type="file"
-       id="image" name="image"
-       accept="image/png, image/jpeg">
-
-  <button id="form-button"><i class="fas fa-plus"></i></button>
+  <div>
+    <label for="image">Téléchargez une photo<br>
+              <i class="fas fa-camera-retro"></i>
+    </label>
+    <br>
+    <input 
+    type="file" 
+    id="image" 
+    name="image" 
+    accept="image/png, image/jpeg" 
+    />
+  </div>
+  <button class="form-button"><i class="fas fa-plus"></i></button>
 </form>
