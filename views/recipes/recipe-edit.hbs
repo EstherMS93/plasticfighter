@@ -1,19 +1,22 @@
-<h1>Modifier votre recette</h1>
+<h1 class="form-header">Modifiez votre recette</h1>
 
-<form action="/recipes/recipe-edit/{{_id}}" method="post">
+<form action="/recipes/recipe-edit/{{_id}}" method="post" class="recipe-form">
   <div>
     <label for="title">Titre</label>
+    <br>
     <input
       id="title"
       name="title"
       type="text"
       placeholder="Shampoing solide"
       value="{{title}}"
+      class="text-input"
     />
   </div>
   <div>
     <label for="type">Type</label>
-    <select id="type" name="type">
+    <br>
+    <select id="type" name="type" class="menu text-input">
       <option value="-1" disabled selected>{{type}}</option>
       <option value="recette">Recette</option>
       <option value="tip">Tip</option>
@@ -21,7 +24,8 @@
   </div>
   <div>
     <label for="category">Catégorie</label>
-    <select id="category" name="category">
+    <br>
+    <select id="category" name="category" class="menu text-input">
       <option value="-1" disabled selected>{{category}}</option>
       <option value="maison">Maison</option>
       <option value="cheveux">Cheveux</option>
@@ -31,37 +35,46 @@
   </div>
   <div>
     <label for="ingredients">Ingrédients</label>
-    <input
+    <br>
+    <textarea
       id="ingredients"
       name="ingredients"
-      type="textarea"
       placeholder="Huile de ricin"
       value="{{ingredients}}"
-    />
+      cols="30"
+      rows="10"
+      class="text-input big">
+      </textarea>
   </div>
     <div>
     <label for="description">Description/ Etapes</label>
-    <input
+    <br>
+    <textarea
       id="description"
       name="description"
-      type="textarea"
       placeholder="Mettre dans un saladier"
       value="{{description}}"
-    />
+      cols="30"
+      rows="10"
+      class="text-input big">
+      </textarea>
   </div>
   <div>
     <label for="duration">Duration en minutes</label>
+    <br>
     <input
       id="duration"
       name="duration"
       type="number"
       placeholder="ex: 20"
       value="{{duration}}"
+      class="text-input"
     />
   </div>
    <div>
     <label for="level">Niveau de difficulté</label>
-    <select id="level" name="level">
+    <br>
+    <select id="level" name="level" class="menu text-input">
       <option value="-1" disabled selected>{{level}}</option>
       <option value="facile">Facile</option>
       <option value="modéré">Modéré</option>
@@ -70,12 +83,23 @@
   </div>
      <div>
     <label for="price">Coût</label>
-    <select id="price" name="price">
+    <br>
+    <select id="price" name="price" class="menu text-input">
       <option value="-1" disabled selected>{{price}}</option>
       <option value="bon marché">Bon marché</option>
       <option value="modéré">Modéré</option>
       <option value="coûteux">Coûteux</option>
     </select>
   </div>
-  <button>Ajouter</button>
+  <div>
+<label for="image">Téléchargez une photo<br>
+    <i class="fas fa-camera-retro"></i>
+    <br>
+    <input 
+    type="file" 
+    id="image" 
+    name="image" 
+    accept="image/png, image/jpeg"/>
+  </div>
+  <button class="form-button"><i class="fas fa-edit"></i></button>
 </form>
