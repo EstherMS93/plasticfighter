@@ -1,0 +1,50 @@
+
+ #tab, #section-description {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+#tab{
+    color: #07998F;
+    font-size: 1.3em; 
+}
+
+#section-description {
+    margin: 7% 3%;
+}
+
+.sub-title {
+    color: #07998F;
+    font-size: 1.3em;
+}
+
+#sectionaccount h2{
+    font-size: 1.6em;
+}
+
+#imgdescription{
+    height: 250px;
+}
+
+.cta {
+    background-color: #07998F;
+    color: white;
+    font-size: 1.3em;
+    width: 130px; 
+    height: 38px;
+    Border: none;
+    margin-right: 2%;
+  }
+
+#sectionaccount{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+    margin-top: 3%;
+}

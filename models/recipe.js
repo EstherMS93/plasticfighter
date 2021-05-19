@@ -17,7 +17,7 @@ const recipeSchema = new Schema(
     price: { type: String, enum: ["bon marché", "modéré", "coûteux"] },
     image: {
       type: String,
-      default: "/images/testimage.png",
+      default: "/images/hygiene.png",
     },
     user: { type: Schema.Types.ObjectId, ref: "user" },
   },
