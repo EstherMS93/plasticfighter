@@ -1,27 +1,55 @@
+<div>
+    <section class="moncompte">
+        <h2 class="sub-title">Mon compte</h2>
+        <div class="eachrecipe">
+            <h3>Mes informations</h3>
+            <ul>
+                <li>Prénom: {{user.name}}</li>
+               <li>email: {{user.name}}</li>
+               <li>code postal: {{user.name}}</li>
+               <li><a class="account-btn editprofil"  href="/auth/editmyaccount/{{user._id}}"><i class="fas fa-user-edit"></i> Modifier mon profil</a></li>
+            </ul>
+            </div>
+    </section>
 
-<h2>Hello {{user.name}}!</h2>
-
-<section id="section-profil">
- <a class="account-btn addrecipe"  href="/recipes/recipe-add"><i
-            class="fa fa-plus"
+    <section class="moncompte">
+         <div class="container-mes-recettes">
+             <h2 class="sub-title">Mes recettes</h2>
+             <a class="account-btn addrecipe"  href="/recipes/recipe-add"><i
+            class="fa fa-plus plus-btn"
             aria-hidden="true"
           ></i> Ajouter une recette</a>
-</div>
- <a class="account-btn editprofil"  href="/auth/editmyaccount/{{user._id}}"><i class="fas fa-user-edit"></i> Modifier mon profil</a>
-</div>
-</section>
-
-<section id="section-recipe-profil">
-<h2 class="sub-title">Vos recettes</h2>
+         </div>
+        <div class="allrecipe">
 <ul>
-    {{#each recipes}}
-    <li>
-        <h2>{{this.title}}</h2>
-        <img class="imgprofil" src="{{this.image}}" alt=cover for the movie {{this.title}}>
-        <a href="/recipes/recipe-detail/{{this._id}}">Voir la recette</a>
-        <a href="/recipes/recipe-edit/{{this._id}}">Modifier la recette</a>
-        <a href="/recipes/recipe-detail/delete/{{this._id}}">Supprimer</a>
-    </li>
-    {{/each}}
+  {{#each recipes}}
+  <div class="eachrecipe">
+  <li>
+    <div class="container-recipe">
+
+    <div >
+      <a href="/recipes/recipe-detail/{{this._id}}"><img
+          class="imgcat"
+          src="{{this.image}}"
+          alt="image-recette"
+        /></a>
+    </div>
+
+    <div class="tab-mini">
+      <ul>
+        <li class="title-liste"><h2>{{this.title}}</h2></li>
+        <li><a href="/recipes/recipe-detail/{{this._id}}">Voir la recette</a></li>
+        <li><a href="/recipes/recipe-edit/{{this._id}}">Modifier la recette</a></li>
+        <li><a href="/recipes/recipe-detail/delete/{{this._id}}">Supprimer</a></li>
+    </ul>
+  </div>
+
+  </li>
+  </div>
+  {{/each}}
 </ul>
-</section>
+</div>
+    </section>
+</div>
+
+
