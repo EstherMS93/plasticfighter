@@ -14,14 +14,12 @@
         <a href="/">
           <img src="/images/logo-typo.png" alt="logo" class="logo" />
         </a>
-
+        <a href="/recipes/recipe-add" class="user-icon"><i class="fa fa-plus plus-btn" aria-hidden="true"></i></a>
         {{#unless currentUser}}
           <a href="/auth/signup" class="user-icon"><i
               class="fas fa-user-alt"
             ></i></a>
         {{else}}
-          <a href="/" class="user-icon">
-            <i class="fas fa-home"></i></a>
           <a href="/auth/myaccount" class="user-icon">
             <i class="fas fa-user-check"></i>
           <a href="/auth/logout" class="user-icon"><i
