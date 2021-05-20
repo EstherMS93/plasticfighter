@@ -4,11 +4,10 @@
   font-family: KoHo;
 }
 
-.titrehome{
-margin: 0;
+.titrehome {
+  margin: 0;
   padding: 0;
 }
-
 
 /*NAV BAR ELEMENTS*/
 .uppernav {
@@ -16,7 +15,6 @@ margin: 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* padding-top: 2px; */
 }
 
 .logo-text {
@@ -35,7 +33,7 @@ margin: 0;
   width: 40%;
   display: flex;
   flex-direction: column;
-  padding: 0px 0px 10px 20px;
+  padding: 0px 0px 5px 50px;
 }
 
 .user-icon {
@@ -47,7 +45,7 @@ margin: 0;
   padding-right: 60px;
 }
 
-.user-icon:hover{
+.user-icon:hover {
   color: rgb(255, 146, 30);
 }
 
@@ -55,10 +53,9 @@ margin: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:center;
-  padding-top: 2px;
-  background-color: rgb(255, 146, 30);
-  height: 35px;
+  justify-content: center;
+  background-color: #ffb133;
+  height: 26px;
   width: 100vw;
 }
 
@@ -71,10 +68,9 @@ margin: 0;
   padding: 60px;
 }
 
-
 #header-main {
   padding: 5px 20px;
-  background:rgba(252, 252, 250, 0.831);
+  background: rgba(252, 252, 250, 0.831);
   position: sticky;
   top: 0;
   display: flex;
@@ -93,7 +89,7 @@ margin: 0;
 }
 
 #content-main {
-  padding: 50px;
+  padding: 30px;
 }
 
 /*IMAGES HOMEPAGE*/
@@ -104,18 +100,20 @@ margin: 0;
   justify-content: center;
 }
 
-.container {
+#photos div {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 3px;
+}
+
+#photos a {
+  text-decoration: none;
 }
 
 .text-bloc {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  text-decoration: none;
   position: relative;
   padding-top: 20px;
   width: 300px;
@@ -124,14 +122,13 @@ margin: 0;
   background-color: rgb(255, 255, 255);
 }
 
-.container .text-bloc{
-  color:rgb(255, 146, 30);
+.titrehome {
+  color: #f59903;
 }
 
-.container .text-bloc:hover{
+.titrehome:hover {
   color: #07998f;
 }
 
 @media screen and (max-width: 1024px) {
-  
 }
