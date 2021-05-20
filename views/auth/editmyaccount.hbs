@@ -1,11 +1,14 @@
-  <h1 class="form-header">Modifiez vos informations</h1>
+  <div class="center-title">
+<h1 class="form-header">Modifiez vos informations</h1>
+</div>
+  
   <form method="post" action="/auth/editmyaccount/{{_id}}" class="signup-form">
     <div>
       <label for="name">Prénom</label> <br>
       <input name="name" id="name" type="text" class="input-text input" placeholder="Mireille" value="{{name}}" required>
     </div>
     <div >
-      <label for="email" >Email</label> <br>
+      <label  for="email" >Email</label> <br>
       <input name="email" id="email" type="email" class="input-text input" placeholder="yoyo@gmail.com" value="{{email}}" required >
     </div>
         <div >

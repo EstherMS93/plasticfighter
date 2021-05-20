@@ -1,13 +1,16 @@
 .signup-form {
     margin-top: 2em;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: #07998f;
 }
+
 .input {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 1em;
     width: 30vw;
+    font-size: 1em;
 }
 
 .auth-btn {
@@ -29,6 +32,7 @@
   }
   .sign-in {
       font-size: 2rem;
+      margin-top: 10px;
   }
 
   .log-form {

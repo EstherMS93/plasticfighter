@@ -1,8 +1,10 @@
+<div class="center-title">
 <h1 class="form-header">Modifiez votre recette</h1>
+</div>
 
-<form action="/recipes/recipe-edit/{{_id}}" method="post" class="recipe-form">
+<form action="/recipes/recipe-edit/{{_id}}" method="post" class="recipe-form" enctype="multipart/form-data">
   <div>
-    <label for="title">Titre</label>
+    <label class="label-recipe" for="title">Titre</label>
     <br>
     <input
       id="title"
@@ -14,7 +16,7 @@
     />
   </div>
   <div>
-    <label for="type">Type</label>
+    <label class="label-recipe" for="type">Type</label>
     <br>
     <select id="type" name="type" class="menu text-input">
       <option value="-1" disabled selected>{{type}}</option>
@@ -23,7 +25,7 @@
     </select>
   </div>
   <div>
-    <label for="category">Catégorie</label>
+    <label class="label-recipe" for="category">Catégorie</label>
     <br>
     <select id="category" name="category" class="menu text-input">
       <option value="-1" disabled selected>{{category}}</option>
@@ -34,7 +36,7 @@
     </select>
   </div>
   <div>
-    <label for="ingredients">Ingrédients</label>
+    <label class="label-recipe" for="ingredients">Ingrédients</label>
     <br>
     <textarea
       id="ingredients"
@@ -47,7 +49,7 @@
       </textarea>
   </div>
     <div>
-    <label for="description">Description/ Etapes</label>
+    <label class="label-recipe" for="description">Description/ Etapes</label>
     <br>
     <textarea
       id="description"
@@ -60,7 +62,7 @@
       </textarea>
   </div>
   <div>
-    <label for="duration">Duration en minutes</label>
+    <label class="label-recipe" for="duration">Duration en minutes</label>
     <br>
     <input
       id="duration"
@@ -72,7 +74,7 @@
     />
   </div>
    <div>
-    <label for="level">Niveau de difficulté</label>
+    <label class="label-recipe" for="level">Niveau de difficulté</label>
     <br>
     <select id="level" name="level" class="menu text-input">
       <option value="-1" disabled selected>{{level}}</option>
@@ -82,7 +84,7 @@
     </select>
   </div>
      <div>
-    <label for="price">Coût</label>
+    <label class="label-recipe" for="price">Coût</label>
     <br>
     <select id="price" name="price" class="menu text-input">
       <option value="-1" disabled selected>{{price}}</option>
@@ -92,7 +94,7 @@
     </select>
   </div>
   <div>
-<label for="image">Téléchargez une photo<br>
+<label class="label-recipe" for="image">Téléchargez une photo<br>
     <i class="fas fa-camera-retro"></i>
     <br>
     <input 

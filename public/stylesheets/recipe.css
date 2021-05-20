@@ -1,12 +1,29 @@
 
 .form-header {
       text-align: center;
-      font-size: 3rem;
+      font-size: 2rem;
       font-style: italic;
       color: #07998F;
       background-color: rgba(250, 232, 171, 0.4);
       transform: skew(9deg,0deg);
-    }
+      width: 400px;
+  height: 40px;
+  text-align: center;
+}
+
+.label-recipe{
+   color: #07998F;
+   font-size: 1.3em;
+}
+
+.center-title{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: center;
+}
 
 .recipe-form {
  text-align: center;

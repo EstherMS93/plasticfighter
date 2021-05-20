@@ -1,14 +1,17 @@
-<h1 class="form-header">Connectez-vous</h1> 
+<div class="center-title">
+<h1 class="form-header">Connectez-vous</h1>
+</div>
+
   <form method="post" action="/auth/signin" class="signup-form">
     <div>
       <label for="email" class="label-ref label">Email</label> <br>
       <input name="email" id="email" type="email" class="input-text input" placeholder="iron@gmail.com" required value="hack@gmail.com">
     </div>
     <div>
-      <label for="password">Password</label> <br>
+      <label for="password">Mot de passe</label> <br>
       <input name="password" id="password" type="password"  class="input-text input" placeholder="••••••" required value="1234">
     </div>
     <button class="auth-btn"><i class="fas fa-sign-in-alt"></i></button>
   </form>
-  <p class="alternative">Pas encore de compte ? <a href="/auth/signup" class="log-form">Créer un compte <i class="fas fa-user-plus sign-in"></i></a></p>
+  <p class="alternative">Pas encore de compte ? <br> <a href="/auth/signup" class="log-form"><i class="fas fa-user-plus sign-in"></i> Créez un compte !</a></p>
 

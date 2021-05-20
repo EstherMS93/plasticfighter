@@ -4,7 +4,7 @@ var router = new express.Router();
 var RecipeModel = require("./../models/recipe");
 var UserModel = require("./../models/user")
 const logUser = require ("./../middlewares/protectRoute")
-const uploader = require ("./../config/cloudinary")
+const Uploader = require ("./../config/cloudinary")
 
 
 ///////////////// Add a recipe /////////////////
@@ -13,7 +13,7 @@ router.get('/recipe-add', logUser, function(req, res, next) {
   res.render('recipes/recipe-add');
 });
 
-router.post("/recipe-add", logUser, uploader.single("image"), async (req, res, next) => {
+router.post("/recipe-add", logUser, Uploader.single("image"), async (req, res, next) => {
   const newRecipe = { ...req.body };
   newRecipe.user = req.session.currentUser._id;
   if (req.file) {
@@ -21,7 +21,7 @@ router.post("/recipe-add", logUser, uploader.single("image"), async (req, res, n
   }
   try {
     await RecipeModel.create(newRecipe);
-    res.redirect("/");
+    res.redirect("/auth/myaccount");
   } catch (err) {
     res.send(err);
   }
@@ -65,9 +65,14 @@ router.get("/recipe-edit/:id", async (req, res, next) => {
   }
 });
 
-router.post("/recipe-edit/:id", (req, res, next) => {
+router.post("/recipe-edit/:id", Uploader.single("image"), (req, res, next) => {
+  console.log(req.body)
+  const editRecipe = { ...req.body };
+  if (req.file) {
+    editRecipe.image = req.file.secure_url;
+  }
   RecipeModel.findByIdAndUpdate(req.params.id, req.body)
-    .then(() => res.redirect("/recipes/allrecipes"))
+    .then(() => res.redirect("/auth/myaccount"))
     .catch(() => res.send("erreur"));
 });
 
@@ -75,7 +80,7 @@ router.post("/recipe-edit/:id", (req, res, next) => {
 router.get("/recipe-detail/delete/:id", async (req, res) => {
   try {
     await RecipeModel.findByIdAndRemove(req.params.id);
-    res.redirect("/");
+    res.redirect("/auth/myaccount");
   } catch (err) {
     next(err);
   }
