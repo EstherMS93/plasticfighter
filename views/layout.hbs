@@ -1,45 +1,52 @@
 <html>
   <head>
     <link rel="stylesheet" href="/stylesheets/index.css" />
+    {{!-- <link rel="stylesheet" href="css/font-awesome-animation.min.css">  test animation icon user KO--}} 
+
     <script
       src="https://kit.fontawesome.com/14a96cbf57.js"
       crossorigin="anonymous"
     ></script>
+
   </head>
 
-    <header id="header-main">
+  <header id="header-main">
 
-      <span>
-        <div class="uppernav">
-          <a href="/">
-            <img src="/images/logo-typo.png" alt="logo" class="logo" />
-          </a>
+    <span>
+      <div class="uppernav">
+        <a href="/">
+          <img src="/images/logo-typo.png" alt="logo" class="logo" />
+        </a>
 
-          {{#unless currentUser}}
-            <a href="/auth/signup" class="user-icon"><i
+        {{#unless currentUser}}
+        <a href="/auth/signup" class="user-icon"><i
                 class="fas fa-user-alt"
-              ></i></a>
-          {{else}}
-            <a href="/auth/logout" class="user-icon"><i
-                class="fas fa-sign-out-alt"
-              ></i></a>
-            <a href="/auth/myaccount" class="user-icon">
-              <i class="fas fa-home"></i></a>
-          {{/unless}}
-        </div>
-      </span>
+              ></i></a> 
 
-      <nav>
-        <div class="lowernav">
-          <a href="/recipes/allrecipes/maison" class="link">Maison</a>
-          <a href="/recipes/allrecipes/visage" class="link">Visage</a>
-          <a href="/recipes/allrecipes/hygiene" class="link">Hygiène</a>
-          <a href="/recipes/allrecipes/cheveux" class="link">Cheveux</a>
-        </div>
-      </nav>
+          {{!-- <a href="/auth/signup" class="user-icon"><i // test icon user animé KO
+              class="fas fa-user-alt animated"
+            ></i></a> --}}
+        {{else}}
+          <a href="/auth/logout" class="user-icon"><i
+              class="fas fa-sign-out-alt"
+            ></i></a>
+          <a href="/auth/myaccount" class="user-icon">
+            <i class="fas fa-home"></i></a>
+        {{/unless}}
+      </div>
+    </span>
 
-    </header>
-    <body>
-      {{{body}}}
-    </body>
+    <nav>
+      <div class="lowernav">
+        <a href="/recipes/allrecipes/maison" class="link">Maison</a>
+        <a href="/recipes/allrecipes/visage" class="link">Visage</a>
+        <a href="/recipes/allrecipes/hygiene" class="link">Hygiène</a>
+        <a href="/recipes/allrecipes/cheveux" class="link">Cheveux</a>
+      </div>
+    </nav>
+
+  </header>
+  <body>
+    {{{body}}}
+  </body>
 </html>
