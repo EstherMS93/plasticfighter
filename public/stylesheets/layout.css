@@ -90,7 +90,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   z-index: 1;
 }
 

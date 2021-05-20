@@ -1,8 +1,9 @@
 <h2>List des recettes/tips</h2>
 
-<div class="allcontainers">
-{{#each recipe}}
-  <div class="container-recipe">
+<ul>
+  {{#each recipe}}
+  <li>
+    <div class="container-recipe">
 
     <div >
       <a href="/recipes/recipe-detail/{{this._id}}"><img
@@ -21,5 +22,8 @@
         <li><a href="/recipes/recipe-detail/{{this._id}}">Voir la recette</a></li>
     </ul>
   </div>
-{{/each}}
-</div>
+  </li>
+   <hr>
+  {{/each}}
+</ul>
+
