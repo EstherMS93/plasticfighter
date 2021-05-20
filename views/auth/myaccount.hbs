@@ -1,5 +1,3 @@
-
-
 <div class="myaccount-section">
   <section class="myaccount-section">
     <h2 class="sub-title">Mon compte</h2>
@@ -11,12 +9,16 @@
         <li>code postal: {{user.cp}}</li>
         <li>Mot de passe: *********</li>
       </ul>
-      <div class="edit-my-account"><a class="btncta" href="/auth/editmyaccount/{{user._id}}"><i class="fas fa-user-edit"></i> Modifier mon profil</a>
-    </div>
+      <div class="edit-my-account"><a class="btncta" href="/auth/editmyaccount/{{user._id}}"><i
+            class="fas fa-user-edit"></i> Modifier mon profil</a>
+      </div>
   </section>
 
   <section class="myaccount-section">
-    <h2 class="sub-title">Mes recettes</h2>
+    <div class="titre-recette-plus">
+      <h2 class="sub-title">Mes recettes</h2><a class="btncta" href="/recipes/recipe-add"><i
+          class="fa fa-plus plus-btn" aria-hidden="true"></i> Ajouter une recette</a>
+    </div>
     <div>
       <ul>
         {{#each recipes}}
@@ -25,7 +27,8 @@
             <div class="card-my-account">
 
               <div>
-                <a href="/recipes/recipe-detail/{{this._id}}"><img class="picture-myrecipe" src="{{this.image}}" alt="image-recette" /></a>
+                <a href="/recipes/recipe-detail/{{this._id}}"><img class="picture-myrecipe" src="{{this.image}}"
+                    alt="image-recette" /></a>
               </div>
 
               <div>
