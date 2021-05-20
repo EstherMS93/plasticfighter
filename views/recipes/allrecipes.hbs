@@ -1,32 +1,23 @@
 <h2 class="form-header">Liste des recettes</h2>
 
-<div class="allrecipe">
-<ul>
+<ul class="allrecipes">
   {{#each recipe}}
-  <div class="eachrecipe">
+  <div class="recipe-box-shadow">
   <li>
-    <div class="container-recipe">
-
-    <div >
+    <div class="recipe-container-box">
       <a href="/recipes/recipe-detail/{{this._id}}"><img
-          class="imgcat"
           src="{{this.image}}"
           alt="image-recette"
         /></a>
-    </div>
-
-    <div class="tab-mini">
       <ul>
-        <li class="title-liste"><h2>{{this.title}}</h2></li>
-        <li class="critere"><i class="far fa-clock"></i> {{this.duration}} minutes</li>
-        <li class="critere"><i class="fas fa-euro-sign"></i> {{this.price}}</li>
-        <li class="critere"><i class="fas fa-sort-amount-up"></i>Difficulté {{this.level}}</li>
-        <li class="lastli"><a class="btnsmall" href="/recipes/recipe-detail/{{this._id}}">Voir la recette</a></li>
+        <li ><h2>{{this.title}}</h2></li>
+        <li ><i class="far fa-clock list-title"></i> {{this.duration}} minutes</li>
+        <li ><i class="fas fa-euro-sign list-title"></i> {{this.price}}</li>
+        <li ><i class="fas fa-sort-amount-up list-title"></i>Difficulté {{this.level}}</li>
+        <div class="padding-link"><a class="link-voir-recette" href="/recipes/recipe-detail/{{this._id}}">Voir la recette</a>
+    </div>
     </ul>
-  </div>
-
   </li>
   </div>
   {{/each}}
 </ul>
-</div>

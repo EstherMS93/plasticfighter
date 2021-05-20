@@ -1,4 +1,79 @@
 
+.myaccount-section{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+
+.myaccount-section h3 {
+  color: #f59903;
+}
+
+.myaccount-section li {
+  list-style: none;
+}
+
+.card-my-account{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+
+.picture-myrecipe{
+  height: 100px;
+}
+
+.edit-my-account{
+  margin-left: 50px;
+  border: none;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.btncta{
+  text-decoration: none;
+  color: #07998f;
+}
+
+.btncta:hover{
+  background-color: #07998f;
+  color: white;
+}
+
+.myrecipe-box-shadow{
+  border-width: 1px;
+	border-style: solid;
+	border-color: #eee;
+	border-radius: 20px;
+	box-sizing: border-box;
+	box-shadow: 2px 2px 10px 0 #eee;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.sub-title{
+  font-size: 2.3em;
+  font-style: italic;
+  background-color: rgba(250, 232, 171, 0.4);
+  transform: skew(9deg,0deg);
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+/*
+.myaccount-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .editprofil {
   background-color: white;
@@ -51,7 +126,7 @@
   margin: 2% 0;
 }
 
-.countaineraccount{
+.containeraccount{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
