@@ -41,7 +41,10 @@ router.get('/signin', function(req, res, next) {
 });
 
 router.get('/myaccount', logUser, function(req, res, next) {
-  res.render('auth/myaccount');
+  RecipeModel.find({user: req.session.currentUser._id})
+  .then(userRecipes => {
+    res.render('auth/myaccount', {user: req.session.currentUser, recipes: userRecipes});
+  })
 });
 
 router.post("/signin", async (req, res, next) => {
@@ -58,12 +61,13 @@ router.post("/signin", async (req, res, next) => {
       const userObject = foundUser.toObject();
       delete userObject.password; 
       req.session.currentUser = userObject;
-      res.redirect(`/auth/myaccount/${req.session.currentUser._id}`);
+      res.redirect("/auth/myaccount");
     }
   }
  
 });
 
+/*
 /// get detail from a user ///
 router.get("/myaccount/:id", (req, res, next) => {
   UserModel.findById(req.params.id)
@@ -76,7 +80,7 @@ router.get("/myaccount/:id", (req, res, next) => {
       next(err);
   })
 })
-
+*/
 
 router.get("/editmyaccount/:id", async (req, res, next) => {
   try {
