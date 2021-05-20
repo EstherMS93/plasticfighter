@@ -1,0 +1,40 @@
+.signup-form {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.input {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 1em;
+    width: 30vw;
+}
+
+.auth-btn {
+    margin: 1%;
+    padding: 1%;
+    border: none;
+    background-color: white;
+    color: #07998f;
+    font-size: 2.5em;
+  }
+  .auth-btn:hover {
+    color: #ffb133;
+    cursor: pointer;
+  }
+  .alternative{
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .sign-in {
+      font-size: 2rem;
+  }
+
+  .log-form {
+      text-decoration: none;
+      color: #07998f;
+  }
+  .log-form:hover {
+    color: #ffb133;
+  }

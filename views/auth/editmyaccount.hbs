@@ -1,16 +1,16 @@
-  <form method="post" action="/auth/editmyaccount/{{_id}}">
+  <form method="post" action="/auth/editmyaccount/{{_id}}" class="signup-form">
     <div>
-      <label for="name">Prénom</label>
+      <label for="name">Prénom</label> <br>
       <input name="name" id="name" type="text" class="input-text input" placeholder="Mireille" value="{{name}}" required>
     </div>
     <div >
-      <label for="email" >Email</label>
+      <label for="email" >Email</label> <br>
       <input name="email" id="email" type="email" class="input-text input" placeholder="yoyo@gmail.com" value="{{email}}" required >
     </div>
         <div >
-      <label for="cp">Code Postal</label>
-      <input name="cp" id="cp" type="number" placeholder="75011"  value="{{cp}}" >
+      <label for="cp">Code Postal</label> <br>
+      <input name="cp" id="cp" type="number" class="input-text input" placeholder="75011"  value="{{cp}}" >
     </div>
-    <button>Modifier mes informations</button>
+    <button class="auth-btn"><i class="fas fa-user-edit"></i></button>
   </form>
 </section>
