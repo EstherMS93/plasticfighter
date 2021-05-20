@@ -1,23 +1,23 @@
 
-  <form method="post" action="/auth/signup">
+  <form method="post" action="/auth/signup" class="signup-form">
     <div>
-      <label for="name">Prénom</label>
+      <label for="name">Prénom</label> <br>
       <input name="name" id="name" type="text" class="input-text input" placeholder="Mireille" required>
     </div>
     <div >
-      <label for="email" >Email</label>
+      <label for="email" >Email</label> <br>
       <input name="email" id="email" type="email" class="input-text input" placeholder="yoyo@gmail.com" required >
     </div>
     <div >
-      <label for="password">Password</label>
-      <input name="password" id="password" type="password" placeholder="••••••" required>
+      <label for="password">Password</label> <br>
+      <input name="password" id="password" type="password" class="input-text input" placeholder="••••••" required >
     </div>
-        <div >
-      <label for="cp">Code Postal</label>
-      <input name="cp" id="cp" type="number" placeholder="75011" required>
+        <div>
+      <label for="cp">Code Postal</label> <br>
+      <input name="cp" id="cp" type="number" class="input-text input" placeholder="75011" required>
     </div>
-    <button>Créer un compte</button>
+    <button class="auth-btn"><i class="fas fa-user-plus"></i></button>
   </form>
-  <p>Vous avez déjà un compte ?<a href="/auth/login">Connectez-vous !</a></p>
+  <p class="alternative">Vous avez déjà un compte ?<a href="/auth/login" class="log-form"> Connectez-vous ! <i class="fas fa-sign-in-alt sign-in"></i></a></p>
 </section>
 
