@@ -1,52 +1,48 @@
-<div>
-    <section class="moncompte">
-        <h2 class="sub-title">Mon compte</h2>
-        <div class="eachrecipe countaineraccount">
-            <ul>
-                <h3>Mes informations</h3>
-                <li>Prénom: {{user.name}}</li>
-               <li>email: {{user.email}}</li>
-               <li>code postal: {{user.cp}}</li>
-               <li>Mot de passe: *********</li>
-            </ul>
-            <a class="account-btn editprofil"  href="/auth/editmyaccount/{{user._id}}"><i class="fas fa-user-edit"></i> Modifier mon profil</a>
-            </div>
-    </section>
+<a class="account-btn addrecipe" href="/recipes/recipe-add"><i class="fa fa-plus plus-btn" aria-hidden="true"></i>
+  Ajouter une recette</a>
 
-    <section class="moncompte">
-         <div class="container-mes-recettes">
-             <h2 class="sub-title">Mes recettes</h2>
-         </div>
-        <div class="allrecipe">
-<ul>
-  {{#each recipes}}
-  <div class="eachrecipe">
-  <li>
-    <div class="container-recipe">
-
-    <div >
-      <a href="/recipes/recipe-detail/{{this._id}}"><img
-          class="imgcat"
-          src="{{this.image}}"
-          alt="image-recette"
-        /></a>
-    </div>
-
-    <div class="tab-mini">
+<div class="myaccount-section">
+  <section class="myaccount-section">
+    <h2 class="sub-title">Mon compte</h2>
+    <div class="card-my-account">
       <ul>
-        <li class="title-liste"><h2>{{this.title}}</h2></li>
-        <li><a href="/recipes/recipe-detail/{{this._id}}">Voir la recette</a></li>
-        <li><a href="/recipes/recipe-edit/{{this._id}}">Modifier la recette</a></li>
-        <li><a href="/recipes/recipe-detail/delete/{{this._id}}">Supprimer</a></li>
-    </ul>
-  </div>
+        <h3>Mes informations</h3>
+        <li>Prénom: {{user.name}}</li>
+        <li>email: {{user.email}}</li>
+        <li>code postal: {{user.cp}}</li>
+        <li>Mot de passe: *********</li>
+      </ul>
+      <div class="edit-my-account"><a class="btncta" href="/auth/editmyaccount/{{user._id}}"><i class="fas fa-user-edit"></i> Modifier mon profil</a>
+    </div>
+  </section>
 
-  </li>
-  </div>
-  {{/each}}
-</ul>
+  <section class="myaccount-section">
+    <h2 class="sub-title">Mes recettes</h2>
+    <div>
+      <ul>
+        {{#each recipes}}
+        <div class="myrecipe-box-shadow">
+          <li>
+            <div class="card-my-account">
+
+              <div>
+                <a href="/recipes/recipe-detail/{{this._id}}"><img class="picture-myrecipe" src="{{this.image}}" alt="image-recette" /></a>
+              </div>
+
+              <div>
+                <ul>
+                  <li>
+                    <h3>{{this.title}}</h3>
+                  </li>
+                  <li><a class="btncta" href="/recipes/recipe-detail/{{this._id}}">Voir la recette</a></li>
+                  <li><a class="btncta" href="/recipes/recipe-edit/{{this._id}}">Modifier la recette</a></li>
+                  <li><a class="btncta" href="/recipes/recipe-detail/delete/{{this._id}}">Supprimer</a></li>
+                </ul>
+              </div>
+          </li>
+        </div>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
 </div>
-    </section>
-</div>
-
-
