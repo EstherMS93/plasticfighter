@@ -11,10 +11,10 @@ body {
   width: 100vw;
 }
 
-html {
+/* html {
   font-size: 10px;
   width: 800px;
-}
+} */
 
 
 /*NAV BAR ELEMENTS*/
@@ -23,7 +23,7 @@ html {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2px;
+  /* padding-top: 2px; */
 }
 
 .logo-text {
@@ -32,7 +32,6 @@ html {
   font-size: 15em;
   font-weight: bold;
   color: #07998f;
-  font-size: 5em;
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -40,9 +39,10 @@ html {
 }
 
 .logo {
-  width: 15%;
+  width: 40%;
   display: flex;
   flex-direction: column;
+  padding: 0px 0px 10px 20px;
 }
 
 .user-icon {
@@ -51,55 +51,52 @@ html {
   color: #07998f;
   display: flex;
   flex-direction: column;
-  padding-right: 20px;
+  padding-right: 60px;
+}
+
+.user-icon:hover{
+  color: rgb(255, 146, 30);
 }
 
 .lowernav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content:center;
   padding-top: 2px;
+  background-color: rgb(255, 146, 30);
+  height: 35px;
+  width: 100vw;
 }
 
 .link {
   font-weight: bolder;
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding-right: 120px;
+  padding: 60px;
 }
 
-.line {
-  width: 100%;
-  height: 1px;
-  border: 2px solid rgb(255, 146, 30);
-  margin-top: 5px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: rgb(255, 146, 30);
-  position: relative;
-}
 
 #header-main {
   padding: 5px 20px;
-  background: #ffffff;
+  background:rgba(252, 252, 250, 0.831);
   position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   z-index: 1;
 }
 
 #header-main .link {
-  color: #07998f;
+  color: #fdffff;
 }
 
 #header-main .link:hover {
-  color: rgb(255, 146, 30);
+  color: #07998f;
 }
 
 #content-main {
@@ -110,7 +107,7 @@ html {
 
 #photos {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -122,16 +119,27 @@ html {
 }
 
 .text-bloc {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
   position: relative;
   padding-top: 20px;
   width: 300px;
   height: 25px;
   bottom: 40px;
   background-color: rgb(255, 255, 255);
-  color: rgb(255, 146, 30);
+  color: rgb(255, 146, 30); 
+}
+
+
+
+#photos .text-bloc{
+  color:rgb(255, 146, 30);
+}
+
+#photos .text-bloc:hover{
+  color: #07998f;
 }
 
 @media screen and (max-width: 1024px) {
