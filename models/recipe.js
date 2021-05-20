@@ -13,7 +13,7 @@ const recipeSchema = new Schema(
     description: String,
     // rating: Number,
     duration: Number,
-    level: { type: String, enum: ["facile", "modérée", "difficile"] },
+    level: { type: String, enum: ["facile", "modéré", "difficile"] },
     price: { type: String, enum: ["bon marché", "modéré", "coûteux"] },
     image: {
       type: String,
