@@ -31,6 +31,7 @@ var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 var recipesRouter = require('./routes/recipes');
 
+app.use(require("./middlewares/exposeLoginStatus"));
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/recipes', recipesRouter);
