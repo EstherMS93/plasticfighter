@@ -1,24 +1,21 @@
 <div>
     <section class="moncompte">
         <h2 class="sub-title">Mon compte</h2>
-        <div class="eachrecipe">
-            <h3>Mes informations</h3>
+        <div class="eachrecipe countaineraccount">
             <ul>
+                <h3>Mes informations</h3>
                 <li>Prénom: {{user.name}}</li>
-               <li>email: {{user.name}}</li>
-               <li>code postal: {{user.name}}</li>
-               <li><a class="account-btn editprofil"  href="/auth/editmyaccount/{{user._id}}"><i class="fas fa-user-edit"></i> Modifier mon profil</a></li>
+               <li>email: {{user.email}}</li>
+               <li>code postal: {{user.cp}}</li>
+               <li>Mot de passe: *********</li>
             </ul>
+            <a class="account-btn editprofil"  href="/auth/editmyaccount/{{user._id}}"><i class="fas fa-user-edit"></i> Modifier mon profil</a>
             </div>
     </section>
 
     <section class="moncompte">
          <div class="container-mes-recettes">
              <h2 class="sub-title">Mes recettes</h2>
-             <a class="account-btn addrecipe"  href="/recipes/recipe-add"><i
-            class="fa fa-plus plus-btn"
-            aria-hidden="true"
-          ></i> Ajouter une recette</a>
          </div>
         <div class="allrecipe">
 <ul>

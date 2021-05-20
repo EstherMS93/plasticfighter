@@ -2,19 +2,12 @@
 
 * {
   font-family: KoHo;
-  margin: 0;
+}
+
+.titrehome{
+margin: 0;
   padding: 0;
 }
-
-body {
-  background: white;
-  width: 100vw;
-}
-
-/* html {
-  font-size: 10px;
-  width: 800px;
-} */
 
 
 /*NAV BAR ELEMENTS*/

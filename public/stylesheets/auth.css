@@ -1,10 +1,4 @@
-.addrecipe {
-  width: 120px
-}
 
-.plus-btn{
-  font-size: 3em;
-}
 
 .editprofil {
   background-color: white;
@@ -35,7 +29,7 @@
 .sub-title{
   font-size: 2.3em;
   font-style: italic;
-  background-color: rgba(204,255,217,.4);
+  background-color: rgba(250, 232, 171, 0.4);
   transform: skew(9deg,0deg);
   width: 300px;
   height: 40px;
@@ -54,5 +48,15 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
-  margin-bottom: 2%
+  margin: 2% 0;
+}
+
+.countaineraccount{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+  color: gray;
 }
