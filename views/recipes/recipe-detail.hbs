@@ -1,22 +1,23 @@
-<h1 class="one-recipe-title">{{recipe.title}}</h1>
-
-<div id="tab">
-    <div><i class="far fa-clock icon-onerecipe"></i> {{recipe.duration}} minutes</div>
-    <div><i class="fas fa-euro-sign icon-onerecipe"></i> {{recipe.price}}</div>
-    <div><i class="fas fa-sort-amount-up icon-onerecipe"></i>difficulté : {{recipe.level}}</div>
-</div>
+<h1 class="form-header">{{recipe.title}}</h1>
+<div id="card-container">
+    <div id="tab">
+        <div><i class="far fa-clock icon-onerecipe"></i> {{recipe.duration}} minutes</div>
+        <div><i class="fas fa-euro-sign icon-onerecipe"></i> {{recipe.price}}</div>
+        <div><i class="fas fa-sort-amount-up icon-onerecipe"></i>difficulté : {{recipe.level}}</div>
+    </div>
 
 <section id="section-description">
 <img id="imgdescription" src="{{recipe.image}}" alt=cover for the movie {{recipe.title}}>
-<div>
-<h2 class="sub-title">Liste des ingrédients</h2>
-{{recipe.ingredients}}
-
-<h2 class="sub-title">Description</h2>
-{{recipe.description}}
+    <div>
+<h2 class="sub-title-card">Liste des ingrédients</h2>
+<p>
+    {{recipe.ingredients}}
+</p>
+<h2 class="sub-title-card">Description</h2>
+<p{{recipe.description}}</p>
 <br>
 <p class="auteur">Créé par {{recipe.user.name}}</p>
+    </div>
 </div>
-
 </section>
  

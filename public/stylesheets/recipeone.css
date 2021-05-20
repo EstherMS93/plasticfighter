@@ -1,46 +1,45 @@
 
- #tab, #section-description {
+#card-container {
+	border-width: 2px;
+	border-style: solid;
+	border-color: #eee;
+	border-radius: 20px;
+	box-sizing: border-box;
+	box-shadow: 2px 2px 10px 0 #eee;
+	margin-left: 20%;
+	margin-bottom: 0;
+	padding: 20px;
+	width: 60%;
+    
+}
+#tab, #section-description {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: space-around;
-	align-items: stretch;
+	align-items: justify;
 	align-content: stretch;
 }
 
 #tab{
     color: #07998F;
-    font-size: 1; 
+    font-size: 112 px; 
 }
 
 #section-description {
     margin: 7% 3%;
-    width: 50%;
 }
 
-.sub-title {
+.sub-title-card {
     color: #07998F;
-    font-size: 1.3em;
 }
-
 #sectionaccount h2{
     font-size: 1.6em;
 }
 
 #imgdescription{
-    height: 250px;
-    margin-right: 2%;
+    height: 200px;
 }
-
-.cta {
-    background-color: #07998F;
-    color: white;
-    font-size: 1.3em;
-    width: 130px; 
-    height: 38px;
-    Border: none;
-    margin-right: 2%;
-  }
 
 #sectionaccount{
 	display: flex;
@@ -65,3 +64,4 @@
     font-size: 3em;
     text-align: center;
 }
+
