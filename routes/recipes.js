@@ -66,12 +66,13 @@ router.get("/recipe-edit/:id", async (req, res, next) => {
 });
 
 router.post("/recipe-edit/:id", Uploader.single("image"), (req, res, next) => {
+  console.log(req.file)
   console.log(req.body)
   const editRecipe = { ...req.body };
   if (req.file) {
     editRecipe.image = req.file.secure_url;
   }
-  RecipeModel.findByIdAndUpdate(req.params.id, req.body)
+  RecipeModel.findByIdAndUpdate(req.params.id, editRecipe)
     .then(() => res.redirect("/auth/myaccount"))
     .catch(() => res.send("erreur"));
 });
